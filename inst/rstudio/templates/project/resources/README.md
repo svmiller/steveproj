@@ -1,6 +1,6 @@
 # A README FOR MY PROJECT
 
-Thank you for choosing [{steveproj}](https://github.com/svmiller/steveproj) for your academic paper/project in the R programming language. You had many options to select to assist you in your research, and you selected this template from a hopelessly vain and self-interested political scientist. No matter the vanity and weirdness of its creator, this package should do well to reduce the transaction costs associated with your research.[^fn]
+Thank you for choosing [{steveproj}](https://github.com/svmiller/steveproj) for your academic paper/project in the R programming language. You had many options to select to assist you in your research, and you selected this template from a hopelessly vain and self-interested political scientist. No matter the vanity and weirdness of its creator, this package should do well to reduce the transaction costs associated with your research.*
 
 
-[^fn]: [{steveproj}](https://github.com/svmiller/steveproj) comes with everything you see here. Batteries not included. Do not taunt [{steveproj}](https://github.com/svmiller/steveproj).
+* [{steveproj}](https://github.com/svmiller/steveproj) comes with everything you see here. Batteries not included. Do not taunt [{steveproj}](https://github.com/svmiller/steveproj).
