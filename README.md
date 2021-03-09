@@ -8,9 +8,18 @@
 
 <img src="http://svmiller.com/images/steveproj-hexlogo.png" alt="My steveproj hexlogo" align="right" width="200" style="padding: 0 15px; float: right;"/>
 
-`steveproj` is an R package to help you start and manage R projects with
-an eye toward producing an academic paper. It’s in development. I don’t
-have much to add on top of that right now. More to come.
+`{steveproj}` is an R package to help you start and manage R projects
+with an eye toward producing an academic project (to culminate in an
+academic paper). The package is in development and will incorporate
+other packages in my eponymous R ecosystem, prominently
+[`{stevetemplates}`](https://github.com/svmiller/stevetemplates). The
+package itself leans primarily on Rstudio and how it creates/manages
+projects. The creation a project in Rstudio, through `{steveproj}`, will
+result in a new directory containing subdirectories for rendering
+documents (`src`), R scripts for analysis (`R`), finished data objects
+(`data`), and finished reports (`doc`). An accompanying `Makefile` and R
+Markdown file will assist in the management and production of the
+project.
 
 ## Installation
 
