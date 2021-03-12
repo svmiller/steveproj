@@ -40,4 +40,43 @@ devtools::install_github("svmiller/steveproj")
 
 ## Usage
 
-More to come.
+My website will have a more exhaustive tutorial for using this package
+and all that comes in it. For now, a user maximize their experience with
+`{steveproj}` through either the console or Rstudio.
+
+### Console
+
+Assume the current working directory is something like
+`/home/steve/Dropbox/projects` (as it is for me). Then, a user can
+create a new project with the `create_project()` command.
+
+``` r
+steveproj::create_project("dissertation")
+```
+
+This will create a new directory in the working directory, titled
+“dissertation”, that includes a skeleton of a research project to assist
+the user in getting started on their academic paper/project. The only
+downside to the console approach over the Rstudio approach is the
+console approach won’t create an `.Rproj` file in the directory. The
+Rstudio approach will.
+
+### Rstudio
+
+Go to *File &gt; New Project*. You’ll see a prompt that looks like this.
+Select “New Directory”.
+
+![](inst/README/steveproj-1.png)
+
+That will direct you here. Scroll down your available project types
+until you see my “Steve project” entry. It will have that “S” icon (that
+is incidentally the icon for my website). Select it.
+
+![](inst/README/steveproj-2.png)
+
+That will direct you here. Enter the name of the directory you want to
+create. Click “Create Project” when you’re done. This will create a new
+directory, titled whatever you entered in the directory name, along with
+an `.Rproj` file. By default, it will also open a new Rstudio session.
+
+![](inst/README/steveproj-3.png)
