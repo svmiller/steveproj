@@ -81,8 +81,9 @@ Select “New Directory”.
 ![](inst/README/steveproj-1.png)
 
 That will direct you here. Scroll down your available project types
-until you see my “Steve project” entry. It will have that “S” icon (that
-is incidentally the icon for my website). Select it.
+until you see my “S” icon, which is incidentally the favicon on [my
+website](http://svmiller.com). Select that entry to create a new
+academic paper/project.
 
 ![](inst/README/steveproj-2.png)
 
