@@ -56,10 +56,22 @@ steveproj::create_project("dissertation")
 
 This will create a new directory in the working directory, titled
 “dissertation”, that includes a skeleton of a research project to assist
-the user in getting started on their academic paper/project. The only
+the user in getting started on their academic paper/project. That
+directory will be located in the current working directory. The only
 downside to the console approach over the Rstudio approach is the
 console approach won’t create an `.Rproj` file in the directory. The
 Rstudio approach will.
+
+You could optionally combine this command line call in the console with
+the following command, which will add an `.Rproj` file to the directory
+you just created
+
+``` r
+# steveproj::create_project("dissertation")
+# ^ assume you just ran this
+# Then, do this next
+steveproj::create_rproj("dissertation")
+```
 
 ### Rstudio
 

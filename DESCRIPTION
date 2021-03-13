@@ -16,7 +16,6 @@ Imports:
     stevetemplates,
     modelr,
     rmarkdown,
-    modelr,
     modelsummary
 Suggests:
     huxtable,
