@@ -2,7 +2,7 @@ Package: steveproj
 Type: Package
 Title: Steve's Academic R Projects
 Version: 0.1.0
-Author:Steven V. Miller
+Author: Steven V. Miller
 Maintainer: Steven V. Miller <steven.v.miller@gmail.com>
 Description: This is a one-function suite and skeleton project directory to help you
     start and manage R projects with an eye toward producing an academic project (to 
@@ -12,12 +12,11 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports:
-    stevemisc,
-    stevetemplates,
-    modelr,
-    rmarkdown,
-    modelsummary
+    rmarkdown
 Suggests:
     huxtable,
-    kableExtra
+    kableExtra,
+    modelr,
+    modelsummary,
+    stevemisc
 RoxygenNote: 7.1.1

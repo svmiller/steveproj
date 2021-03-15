@@ -1,0 +1,30 @@
+Binding: create_project
+Title: Academic Paper/Project using {steveproj}
+OpenFiles: README.md
+# In the project you can also add icons (the icon should be a PNG, smaller than 64kb
+# and in the inst/rstudio/templates folder
+Icon: icon-44.png
+# Parameter: check
+# Widget: CheckboxInput
+# Label: Checkbox Input
+# Default: On
+# Position: left
+
+# Parameter: select
+# Widget: SelectInput
+# Label: Select Input
+# Fields: Field A, Field B, Field C
+# Default: Field B
+# Position: left
+
+# Parameter: text
+# Widget: TextInput
+# Label: Text Input
+# Default: Hello, world!
+# Position: right
+#
+# Parameter: file
+# Widget: FileInput
+# Label: File Input
+# Default: ~/
+# Position: right
