@@ -23,4 +23,5 @@ Suggests:
     modelr,
     modelsummary,
     stevemisc,
+    ymlthis
 RoxygenNote: 7.1.1
