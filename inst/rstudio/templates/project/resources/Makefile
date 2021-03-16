@@ -1,6 +1,6 @@
 # Specify a vew variables to avoid repitition downstream
 
-OUTPUTS=doc/ms.pdf doc/ms-anon.pdf doc/ms.docx
+OUTPUTS=doc/ms.pdf doc/ms-anon.pdf doc/ms.docx doc/abstract.pdf
 RDS= data/Sims.rds data/Mods.rds data/Data.rds
 
 # Specify the primary targets: the outputs
@@ -25,6 +25,9 @@ doc/ms.docx: ms.Rmd $(RDS)
 
 inst/refs.bib: ms.Rmd
 	Rscript -e 'source("src/get_citations.R")'
+
+doc/abstract.pdf:	ms.Rmd
+	Rscript -e 'source("src/render_abstract.R")'
 
 # Specify what to do for each target .rds
 
