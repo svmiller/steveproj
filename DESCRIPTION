@@ -14,9 +14,12 @@ LazyData: true
 Imports:
     rmarkdown
 Suggests:
+    bib2df,
+    dplyr,
     huxtable,
     kableExtra,
+    magrittr,
     modelr,
     modelsummary,
-    stevemisc
+    stevemisc,
 RoxygenNote: 7.1.1
