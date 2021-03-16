@@ -1,4 +1,4 @@
-# Specify a vew variables to avoid repitition downstream
+# Specify a fvew variables to avoid repitition downstream
 
 OUTPUTS=doc/ms.pdf doc/ms-anon.pdf doc/ms.docx doc/abstract.pdf
 RDS= data/Sims.rds data/Mods.rds data/Data.rds
