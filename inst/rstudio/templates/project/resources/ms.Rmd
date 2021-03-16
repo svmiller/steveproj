@@ -20,8 +20,10 @@ sansitup: FALSE
 params:
   anonymous: ""
   doublespacing: ""
+  removetitleabstract: ""
 anonymous: "`r params$anonymous`"
 doublespacing: "`r params$doublespacing`"
+removetitleabstract: "`r params$removetitleabstract`"
 header-includes:
   - \usepackage{longtable}
   - \LTcapwidth=.95\textwidth
