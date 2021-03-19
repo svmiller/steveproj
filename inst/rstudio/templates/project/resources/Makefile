@@ -10,7 +10,9 @@ all: $(OUTPUTS)
 refs: inst/refs.bib
 
 clean:
-	rm -f $(OUTPUTS) $(RDS)
+	rm -rf doc/* data/*
+
+.PHONY: clean
 
 # Specialty sourcing for each output
 
