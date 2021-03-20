@@ -5,3 +5,6 @@
 
 !.gitignore
 example
+
+# This is where I hide junk
+_dross
