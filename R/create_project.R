@@ -25,7 +25,7 @@ create_project <- function(path, ...) {
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
 
   # copy 'resources' folder to path
-  resources = system.file('rstudio', 'templates', 'project', 'resources', package='steveproj')
+  resources = system.file('skeleton', package='steveproj')
   #
   files = list.files(resources, recursive = TRUE, include.dirs = TRUE)
   #
