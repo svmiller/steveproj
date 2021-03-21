@@ -23,6 +23,8 @@ Suggests:
     magrittr,
     modelr,
     modelsummary,
+    readr,
     stevemisc,
+    yaml,
     ymlthis
 RoxygenNote: 7.1.1
