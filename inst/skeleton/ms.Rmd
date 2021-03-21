@@ -237,4 +237,13 @@ Cosmic ocean star stuff harvesting star light prime number globular star cluster
 
 # References
 
-\setlength{\parskip}{6pt}
+<!-- This option seems to be more pleasing for rmarkdown::pdf_document() with my templates -->
+<!-- \setlength{\parskip}{6pt} --> 
+
+<!-- If you're using bookdown, this seems to look better with bookdown::pdf_document2() -->
+\setlength{\parskip}{8pt}
+\setlength{\parindent}{-0.15in}
+\setlength{\leftskip}{0.15in}
+\vspace*{-0.35in}
+\noindent
+\singlespacing
