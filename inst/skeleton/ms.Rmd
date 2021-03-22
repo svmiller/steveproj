@@ -43,10 +43,10 @@ is_latex <- knitr::pandoc_to("latex")
 if (is_latex) {
   conditional_dpi <- 96
   return(conditional_dpi)
-} else if (is_docx) {
+} else {
   conditional_dpi <- 600
   return(conditional_dpi)
-} else {}
+} 
 
 
 knitr::opts_chunk$set(echo = FALSE,
@@ -115,13 +115,13 @@ A still more glorious dawn awaits corpus callosum cosmos how far away hydrogen a
 \vspace{.5cm}
 \begin{hypothesis}
 \begin{minipage}[t]{5.1 in}
-This is a hypothesis, but only for LaTeX. MS Word will pass over it like a good boy. MS Word mercifully has no concept of LaTeX code and will ignore it upon seeing it. To be fair, {\tt bookdown} has various theorems and the like, but no outright hypothesis field. This will have to do.
+This is a hypothesis, but only for LaTeX. MS Word will pass over it like a good boy, as will HTML. Mercifully, neither has any concept of LaTeX code and will ignore it upon seeing it. To be fair, {\tt bookdown} has various theorems and the like, but no outright hypothesis field. This will have to do.
 \end{minipage}
 \end{hypothesis}
 \vspace{.5cm}
 
-```{r h1, eval=is_docx, results="asis"}
-cat('> **H1**: This is a hypothesis, but only for MS Word. Conditional evaluation in R Markdown will pass over this chunk, like a good boy. This will not be formatted perfectly for what we would want, but it will suffice.') 
+```{r h1, eval=!is_latex, results="asis"}
+cat('> **H1**: This is a hypothesis, but not for LaTeX. Conditional evaluation in R Markdown will pass over this chunk, like a good boy. This will not be formatted perfectly for what we would want, but it will suffice.') 
 ```
 
 # Research Design
