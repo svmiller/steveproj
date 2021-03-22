@@ -21,6 +21,40 @@ documents (`src`), R scripts for analysis (`R`), finished data objects
 Markdown file will assist in the management and production of the
 project.
 
+## What It Does (So Far)
+
+Assuming the latest/development version of
+[`{stevetemplates}`](https://github.com/svmiller/stevetemplates)
+(i.e. the one that has the Word template) and considering any potential
+LaTeX weirdness that comes from different builds, this package has
+function in R and Make that will:
+
+-   simplify the research process to three basic “targets” (in Make): a
+    finished data product to analyze, statistical models of the data,
+    and post-estimation simulations of quantities of interest from the
+    data. These scripts are in the `R/` directory and render to the
+    `data/` directory.
+-   render your R Markdown document to a fancy PDF document in LaTeX
+    using [my second article
+    template](http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/).
+-   render your R Markdown document to an anonymized version of that
+    same document. [A post on my
+    blog](http://svmiller.com/blog/2021/03/handle-academic-projects-steveproj-make/)
+    gives clues how to do this with YAML parameters.
+-   render your R Markdown document to an anonymized Word document.
+    Anonymized Word documents are all that I’m willing to support here.
+    The goal isn’t to publish to Word, per se; it’s only to produce a
+    document suitable for peer review for journals that demand you
+    provide one.
+-   farm your R Markdown document for citations and format them to a
+    bibliography file. By default, this will render to a `refs.bib` file
+    in the `inst/` directory. You can tweak this if you like.
+-   scan your R Markdown document to render a simple title page for peer
+    review. Traditionally, journals ask for a title page (with author
+    information) and a manuscript (without author information).
+    `render_abstract.R` in the `src/` directory is the companion script
+    to `render_pdf-anon.R` in the same directory.
+
 ## Installation
 
 When the time comes, you can install this on CRAN.
