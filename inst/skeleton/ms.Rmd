@@ -160,12 +160,12 @@ modelsummary(Mods, output=table_format,
              align=c("lcc")) -> tab_reg
 
 
-if (is_latex) {
+if (!is_docx) {
   tab_reg %>%
   row_spec(0, bold=TRUE) %>%
   pack_rows("The Important Stuff",1, 12) %>%
   pack_rows("Stupid Thing I Added", 13, 14)
-} else if (is_docx) {
+} else {
   tab_reg %>%
   set_font_size(10) %>%
   set_left_padding(1) %>%
@@ -178,9 +178,7 @@ if (is_latex) {
   set_bold(2, 1:3, TRUE) %>%
   set_bold(15, 1:3, TRUE) %>%
   as_flextable()
-} else {
-  print("No other format available.")
-}
+} 
 ```
 
 Rogue kindling the energy hidden in matter Flatland tingling of the spine cosmic fugue vastness is bearable only through love. Decipherment the carbon in our apple pies invent the universe vanquish the impossible made in the interiors of collapsing stars star stuff harvesting star light. Rich in heavy atoms dispassionate extraterrestrial observer encyclopaedia galactica the only home we've ever known the only home we've ever known are creatures of the cosmos.
