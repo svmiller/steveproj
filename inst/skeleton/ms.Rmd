@@ -32,8 +32,8 @@ header-includes:
 ---
 
 ```{r setup, include=FALSE}
-is_docx <- knitr::opts_knit$get("rmarkdown.pandoc.to") == 'docx'
-is_latex <- knitr::opts_knit$get("rmarkdown.pandoc.to") == 'latex'
+is_docx <- knitr::pandoc_to("docx")
+is_latex <- knitr::pandoc_to("latex")
 
 # I don't know how Texas Instruments smart this is, but p-sure default DPI is 96.
 # That's not a problem for LaTeX, but it looks not-so-great for Word.
