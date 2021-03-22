@@ -29,6 +29,7 @@ header-includes:
   - \LTcapwidth=.95\textwidth
   - \linespread{1.05}
   - \usepackage{hyperref}
+  - \usepackage{setspace}
 ---
 
 ```{r setup, include=FALSE}
