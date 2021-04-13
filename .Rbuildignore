@@ -3,3 +3,6 @@
 ^README\.Rmd$
 ^example$
 ^inst/README$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
