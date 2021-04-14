@@ -98,7 +98,7 @@ Rstudio approach will.
 
 You could optionally combine this command line call in the console with
 the following command, which will add an `.Rproj` file to the directory
-you just created
+you just created.
 
 ``` r
 # steveproj::create_project("dissertation")
@@ -112,18 +112,18 @@ steveproj::create_rproj("dissertation")
 Go to *File &gt; New Project*. You’ll see a prompt that looks like this.
 Select “New Directory”.
 
-![](inst/README/steveproj-1.png)
+![](http://svmiller.com/images/github-steveproj/steveproj-1.png)
 
 That will direct you here. Scroll down your available project types
 until you see my “S” icon, which is incidentally the favicon on [my
 website](http://svmiller.com). Select that entry to create a new
 academic paper/project.
 
-![](inst/README/steveproj-2.png)
+![](http://svmiller.com/images/github-steveproj/steveproj-2.png)
 
 That will direct you here. Enter the name of the directory you want to
 create. Click “Create Project” when you’re done. This will create a new
 directory, titled whatever you entered in the directory name, along with
 an `.Rproj` file. By default, it will also open a new Rstudio session.
 
-![](inst/README/steveproj-3.png)
+![](http://svmiller.com/images/github-steveproj/steveproj-3.png)
