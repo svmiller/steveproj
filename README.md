@@ -57,20 +57,76 @@ function in R and Make that will:
 
 ## Installation
 
-When the time comes, you can install this on CRAN.
+When the time comes, you can install this on CRAN. Any version of this
+package on CRAN should be understood as a “stable” release that may lag
+behind the “development” versions available on Github. However, releases
+on CRAN should come with more confidence about quality control.
 
 ``` r
 install.packages("steveproj")
 ```
 
-Right now, this package in development and is not available on CRAN. You
-can install the development version of `steveproj` from Github via the
-`devtools` package. I suppose using the `remotes` package would work as
-well.
+A developmental version version of `{steveproj}` is available on Github
+and you can install it via the `{devtools}` package. I suppose using the
+`{remotes}` package would work as well.
 
 ``` r
 devtools::install_github("svmiller/steveproj")
 ```
+
+### A Comment on Make and Rstudio
+
+The functions in this package work as intended in an R console, but this
+package realizes its full potential and its core functions are fully
+augmented through two additional pieces of software the user should
+already have installed. The first is [Rstudio](https://www.rstudio.com).
+Most dedicated R users are likely fully aware of Rstudio as an
+integrated desktop environment (IDE) and already have it installed and
+pre-configured to what they think is ideal for their workflow. I will
+only add that I think it advantageous for the sake of this package to
+adjust the pane layout such that the “source” pane is top left, the
+“console” pane is top right, the “environment” pane is bottom left, and
+the “files” pane is bottom right.
+
+The second piece of software the user should install is
+[Make](https://en.wikipedia.org/wiki/Make_(software)). Make is a build
+automation tool built around a “Makefile”, which contains a set of
+recipes that have various targets and dependencies. For each target, if
+the specified dependency is “newer” than the target (or if the target
+does not yet exist), the Makefile executes a command. Users will get a
+reproducible example of how this works, and they can learn by example
+from it, but it assumes the user already has it installed.
+
+Installation of Make prior to installation of `{steveproj}` is not
+necessary; in fact, it’s not even strictly necessary to have Make
+installed at all. It is, however, strongly encouraged. Linux users and
+Mac users should, in theory, have Make installed on their operating
+systems already (i.e. because both are UNIX-derivative and Make is a GNU
+program). Opening a terminal and entering the following command should
+confirm that.
+
+``` make
+make -v
+```
+
+If the console output instead suggests Make is not installed, the user
+may want to search for how they can install it (given their particular
+flavor of Mac or Linux). For Mac users, most paths would lead to
+[installing or updating Xcode from the App
+Store](https://stackoverflow.com/questions/10265742/how-to-install-make-and-gcc-on-a-mac)
+through the popular [`Homebrew` package manager](https://brew.sh) should
+also do this. Ubuntu (Linux) users who, for some reason, don’t already
+have this installed can install it via
+`sudo apt-get install build-essential` or `sudo apt-get -y install make`
+in a console.
+
+Windows users will invariably have to install it since it will not come
+by default. [*The Carpentries* has a
+guide](https://swcarpentry.github.io/make-novice/setup) has a guide and
+installer to do this. Windows users may also want to [consider
+installing `Chocolately`](https://chocolatey.org), an apparent
+`Homebrew` analog for Windows users. Afterward, a simple
+`choco install make` command should work just fine.
 
 ## Usage
 
