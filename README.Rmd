@@ -69,8 +69,7 @@ make -v
 
 If the console output instead suggests Make is not installed, the user may want to search for how they can install it (given their particular flavor of Mac or Linux). For Mac users, most paths would lead to [installing or updating Xcode from the App Store](https://stackoverflow.com/questions/10265742/how-to-install-make-and-gcc-on-a-mac) through the popular [`Homebrew` package manager](https://brew.sh) should also do this. Ubuntu (Linux) users who, for some reason, don't already have this installed can install it via `sudo apt-get install build-essential` or `sudo apt-get -y install make` in a console.
 
-Windows users will invariably have to install it since it will not come by default. [*The Carpentries* has a guide](https://swcarpentry.github.io/make-novice/setup) has a guide and installer to do this. Windows users may also want to [consider installing `Chocolately`](https://chocolatey.org), an apparent `Homebrew` analog for Windows users. Afterward, a simple `choco install make` command should work just fine.
-
+Windows users will invariably have to install it since it will not come by default. [*The Carpentries* has a guide](https://swcarpentry.github.io/make-novice/setup) has a guide and installer to do this. Windows users may also want to [consider installing `Chocolately`](https://chocolatey.org), an apparent `Homebrew` analog for Windows users. Afterward, a simple `choco install make` command should work just fine. The increased integration of Linux into Windows, prominently [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), offers more avenues for Windows users to install Make on their operating system.
 
 ## Usage
 

@@ -126,7 +126,11 @@ guide](https://swcarpentry.github.io/make-novice/setup) has a guide and
 installer to do this. Windows users may also want to [consider
 installing `Chocolately`](https://chocolatey.org), an apparent
 `Homebrew` analog for Windows users. Afterward, a simple
-`choco install make` command should work just fine.
+`choco install make` command should work just fine. The increased
+integration of Linux into Windows, prominently [Windows Subsystem for
+Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10),
+offers more avenues for Windows users to install Make on their operating
+system.
 
 ## Usage
 

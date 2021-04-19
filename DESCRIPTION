@@ -14,7 +14,8 @@ LazyData: true
 Imports:
     bookdown,
     rmarkdown,
-    stevetemplates (>= 0.5.0)
+    stevetemplates (>= 0.5.0),
+    stevemisc (>= 1.0.0)
 Suggests:
     bib2df,
     dplyr,
