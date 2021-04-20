@@ -115,10 +115,15 @@ flavor of Mac or Linux). For Mac users, most paths would lead to
 [installing or updating Xcode from the App
 Store](https://stackoverflow.com/questions/10265742/how-to-install-make-and-gcc-on-a-mac)
 through the popular [`Homebrew` package manager](https://brew.sh) should
-also do this. Ubuntu (Linux) users who, for some reason, don’t already
-have this installed can install it via
-`sudo apt-get install build-essential` or `sudo apt-get -y install make`
-in a console.
+also do this. Linux users in the Debian family (prominently: Ubuntu)
+who, for some reason, don’t already have this installed can install it
+via `sudo apt-get install build-essential` or
+`sudo apt-get -y install make` in a console. Linux users in the Red Hat
+family (prominently: Fedora) should be able to install it by way of
+`sudo yum install yum-utils` or `dnf install @development-tools`.
+However, it seems impossible that these would not already be installed
+on most Linux distributions these days. No matter, `make -v` should
+confirm its presence after one of these installation paths.
 
 Windows users will invariably have to install it since it will not come
 by default. [*The Carpentries* has a
