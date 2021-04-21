@@ -8,6 +8,7 @@ Description: This is a one-function suite and skeleton project directory to help
     start and manage R projects with an eye toward producing an academic project (to 
     culminate in an academic paper). This package will lean on "R Markdown" and "Make".
 BugReports: https://github.com/svmiller/steveproj/issues
+URL: http://svmiller.com/steveproj/
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
