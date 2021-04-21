@@ -16,9 +16,9 @@ other packages in my eponymous R ecosystem, prominently
 package itself leans primarily on Rstudio and how it creates/manages
 projects. The creation a project in Rstudio, through `{steveproj}`, will
 result in a new directory containing subdirectories for rendering
-documents (`src`), R scripts for analysis (`R`), finished data objects
-(`data`), and finished reports (`doc`). An accompanying `Makefile` and R
-Markdown file will assist in the management and production of the
+documents (`src/`), R scripts for analysis (`R/`), finished data objects
+(`data/`), and finished reports (`doc/`). An accompanying `Makefile` and
+R Markdown file will assist in the management and production of the
 project.
 
 ## What It Does (So Far)
@@ -74,11 +74,11 @@ and you can install it via the `{devtools}` package. I suppose using the
 devtools::install_github("svmiller/steveproj")
 ```
 
-### A Comment on Make and Rstudio
+### A Comment on LaTeX, Make, and Rstudio
 
 The functions in this package work as intended in an R console, but this
 package realizes its full potential and its core functions are fully
-augmented through two additional pieces of software the user should
+augmented through three additional pieces of software the user should
 already have installed. The first is [Rstudio](https://www.rstudio.com).
 Most dedicated R users are likely fully aware of Rstudio as an
 integrated desktop environment (IDE) and already have it installed and
@@ -88,7 +88,37 @@ adjust the pane layout such that the “source” pane is top left, the
 “console” pane is top right, the “environment” pane is bottom left, and
 the “files” pane is bottom right.
 
-The second piece of software the user should install is
+The second piece of software is [LaTeX](https://www.latex-project.org).
+LaTeX is a prominent document preparation system in academia and
+preferred by publishers especially for its contrast to “What You See Is
+What You Get” word processors like Microsoft Word. `{steveproj}`
+ultimately places R Markdown and Pandoc—which are necessary for this
+package—before LaTeX in terms of document preparation. No matter,
+`{steveproj}` necessarily elevates LaTeX PDF documents above other
+output types. Interested users with no awareness of LaTeX should know
+`{steveproj}` imports `{rmarkdown}`, which in turn imports `{tinytex}`.
+This would install and maintain a version of LaTeX to compile these
+documents. However, the particular flavor of LaTeX template (from
+`{stevetemplates}`) requires one additional LaTeX dependency that
+`{tinytex}` does not install by default. You may encounter a vague error
+in rendering to PDF that reads something like this.
+
+> ! Undefined control sequence. l.40 {same} % disable monospaced font
+> for URLs
+
+If you encounter this error, run the following command in your R
+console.
+
+``` r
+tinytex::tlmgr_install("xurl")
+```
+
+[This should fix
+it](https://github.com/svmiller/stevetemplates/issues/1). I thank Ian
+Adams for bringing this to my attention (and Cornelius Hennch for
+proposing a solution).
+
+The third piece of software the user should install is
 [Make](https://en.wikipedia.org/wiki/Make_(software)). Make is a build
 automation tool built around a “Makefile”, which contains a set of
 recipes that have various targets and dependencies. For each target, if
@@ -127,12 +157,12 @@ confirm its presence after one of these installation paths.
 
 Windows users will invariably have to install it since it will not come
 by default. [*The Carpentries* has a
-guide](https://swcarpentry.github.io/make-novice/setup) has a guide and
-installer to do this. Windows users may also want to [consider
-installing `Chocolately`](https://chocolatey.org), an apparent
-`Homebrew` analog for Windows users. Afterward, a simple
-`choco install make` command should work just fine. The increased
-integration of Linux into Windows, prominently [Windows Subsystem for
+guide](https://swcarpentry.github.io/make-novice/setup) and installer to
+do this. Windows users may also want to [consider installing
+`Chocolately`](https://chocolatey.org), an apparent `Homebrew` analog
+for Windows users. Afterward, a simple `choco install make` command
+should work just fine. The increased integration of Linux into Windows,
+prominently [Windows Subsystem for
 Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10),
 offers more avenues for Windows users to install Make on their operating
 system.
