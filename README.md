@@ -95,13 +95,30 @@ What You Get” word processors like Microsoft Word. `{steveproj}`
 ultimately places R Markdown and Pandoc—which are necessary for this
 package—before LaTeX in terms of document preparation. No matter,
 `{steveproj}` necessarily elevates LaTeX PDF documents above other
-output types. Interested users with no awareness of LaTeX should know
-`{steveproj}` imports `{rmarkdown}`, which in turn imports `{tinytex}`.
-This would install and maintain a version of LaTeX to compile these
-documents. However, the particular flavor of LaTeX template (from
-`{stevetemplates}`) requires one additional LaTeX dependency that
-`{tinytex}` does not install by default. You may encounter a vague error
-in rendering to PDF that reads something like this.
+output types.
+
+There are two options for installing LaTeX on your system. First, you
+can install it yourself—in all its 4+ gigabytes of glory. For Mac users,
+this is “MacTeX” and you can [install it
+here](http://www.tug.org/mactex/). For Windows users, this is “MikTeX”
+and you can [install it here](https://miktex.org/). For (Ubuntu) Linux
+users, something like
+`sudo apt-get install texlive-base texlive-latex-base texlive-latex-extra`
+should work. Linux users are probably aware that whatever version of
+LaTeX comes default in their package manager of choice comes with
+multiple, complementary packages. Installing even `texlive-base` will
+probably install more of them as dependencies.
+
+The second option is tailored for those interested users with no
+awareness of LaTeX. `{steveproj}` imports `{rmarkdown}`, which in turn
+imports `{tinytex}`. This would install and maintain a version of LaTeX
+to compile these documents that ostensibly precludes the need to install
+the more comprehensive suites available for download and installation on
+the internet. I will only add that users who do this should know the
+preferred flavor of LaTeX template (from `{stevetemplates}`) in this
+package requires one additional LaTeX dependency that `{tinytex}` does
+not install by default. You may encounter a vague error in rendering to
+PDF that reads something like this.
 
 > ! Undefined control sequence. l.40 {same} % disable monospaced font
 > for URLs
