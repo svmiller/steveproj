@@ -12,12 +12,8 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports:
-    bookdown,
-    rmarkdown,
-    stevetemplates (>= 0.5.0),
-    stevemisc (>= 1.0.0)
-Suggests:
     bib2df,
+    bookdown,
     dplyr,
     huxtable,
     kableExtra,
@@ -25,7 +21,13 @@ Suggests:
     modelr,
     modelsummary,
     readr,
-    stevemisc,
+    rmarkdown,
+    stevetemplates (>= 0.5.0),
+    stevemisc (>= 1.0.0),
+    stringr,
     yaml,
     ymlthis
+Suggests:
+    testthat (>= 3.0.0)
 RoxygenNote: 7.1.1
+Config/testthat/edition: 3

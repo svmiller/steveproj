@@ -1,7 +1,6 @@
 # load libraries ----
 # load the functions I need to process the data
 library(stevedata) # has the raw data
-library(tidyverse) # used for most everything
 
 # "load" the data ----
 # Note: in your case, you can load raw data from wherever, even outside the project directory
@@ -13,9 +12,16 @@ data(ESS9GB, package="stevedata")
 # "prep" the data ----
 # I can do anything I want here. I can recode things, transform variables, or whatever
 # Here, let's just create a stupid noise variable
+
+Data <- ESS9GB
+
 set.seed(8675309)
-ESS9GB %>%
-  mutate(noise = rnorm(nrow(.))) -> Data
+Data$noise <- rnorm(nrow(Data))
+
+# in {tidyverse}
+# set.seed(8675309)
+# ESS9GB %>%
+#   mutate(noise = rnorm(nrow(.))) -> Data
 
 # ^ Notice that I "finished" my data prep into a new object, titled "Data"
 # Now: I save it to data/Data.rds

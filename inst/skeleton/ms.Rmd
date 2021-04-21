@@ -61,7 +61,9 @@ knitr::opts_chunk$set(echo = FALSE,
                       })
 
 
-library(tidyverse)
+library(dplyr)
+library(magrittr)
+# library(tidyverse)
 library(stevemisc)
 library(modelsummary)
 library(huxtable)
