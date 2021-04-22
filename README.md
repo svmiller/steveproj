@@ -111,14 +111,22 @@ probably install more of them as dependencies.
 
 The second option is tailored for those interested users with no
 awareness of LaTeX. `{steveproj}` imports `{rmarkdown}`, which in turn
-imports `{tinytex}`. This would install and maintain a version of LaTeX
-to compile these documents that ostensibly precludes the need to install
-the more comprehensive suites available for download and installation on
-the internet. I will only add that users who do this should know the
-preferred flavor of LaTeX template (from `{stevetemplates}`) in this
-package requires one additional LaTeX dependency that `{tinytex}` does
-not install by default. You may encounter a vague error in rendering to
-PDF that reads something like this.
+imports `{tinytex}`. This would be an R package to install and maintain
+a version of LaTeX to compile these documents that ostensibly precludes
+the need to download the more comprehensive suites available on the
+internet as proper LaTeX distributions for different operating systems.
+Once `{tinytex}` is installed as an R package, this simple function will
+install a working version of LaTeX.
+
+``` r
+tinytex::install_tinytex()
+```
+
+I will only add that users who do this should know the preferred flavor
+of LaTeX template (from `{stevetemplates}`) in this package requires one
+additional LaTeX dependency that `{tinytex}` does not install by
+default. You may encounter a vague error in rendering to PDF that reads
+something like this.
 
 > ! Undefined control sequence. l.40 {same} % disable monospaced font
 > for URLs
