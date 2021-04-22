@@ -251,3 +251,34 @@ directory, titled whatever you entered in the directory name, along with
 an `.Rproj` file. By default, it will also open a new Rstudio session.
 
 ![](http://svmiller.com/images/github-steveproj/steveproj-3.png)
+
+# An Illustration of Automated Workflow in `{steveproj}`
+
+[The March 15, 2021 post on my
+blog](http://svmiller.com/blog/2021/03/handle-academic-projects-steveproj-make/)
+talks more about the design here. Obviously, the skeleton project
+created in `{steveproj}` is full of gibberish text and an analysis that
+is likely uninteresting to the user. No matter, the skeleton project
+points to the possibilities of `{steveproj}` and suggests a template to
+copy for your own workflow.
+
+The `Makefile` and `ms.Rmd` files are executable as they are (assuming,
+obviously, that you installed Make). In Rstudio, switch from the console
+tab to the terminal tab. Therein, enter the following command (provided
+the working directory in the terminal is the same as the location of
+`Makefile`).
+
+    make all
+
+This will run the analyses and compile the results of the analyses into
+a PDF document, an anonymized PDF document, an anonymized Word document,
+and an HTML document. It will also generate an title page with abstract.
+All of those files will be in the `doc/` directory.
+
+If the user is interested in generating a `.bib` file for their
+citations, they can execute the following command.
+
+    make refs
+
+This will farm the `ms.Rmd` file for citations and format that as a
+`refs.bib` file in the `inst/` directory.

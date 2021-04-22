@@ -69,6 +69,7 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="steves-academic-r-projects" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#steves-academic-r-projects" class="anchor"></a>Steve’s Academic R Projects</h1></div>
@@ -151,6 +152,19 @@
 </div>
 </div>
 </div>
+<div id="an-illustration-of-automated-workflow-in-steveproj" class="section level1">
+<h1 class="hasAnchor">
+<a href="#an-illustration-of-automated-workflow-in-steveproj" class="anchor"></a>An Illustration of Automated Workflow in <code>{steveproj}</code>
+</h1>
+<p><a href="http://svmiller.com/blog/2021/03/handle-academic-projects-steveproj-make/">The March 15, 2021 post on my blog</a> talks more about the design here. Obviously, the skeleton project created in <a href="http://svmiller.com/steveproj/">steveproj</a> is full of gibberish text and an analysis that is likely uninteresting to the user. No matter, the skeleton project points to the possibilities of <a href="http://svmiller.com/steveproj/">steveproj</a> and suggests a template to copy for your own workflow.</p>
+<p>The <code>Makefile</code> and <code>ms.Rmd</code> files are executable as they are (assuming, obviously, that you installed Make). In Rstudio, switch from the console tab to the terminal tab. Therein, enter the following command (provided the working directory in the terminal is the same as the location of <code>Makefile</code>).</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>make all</span></code></pre></div>
+<p>This will run the analyses and compile the results of the analyses into a PDF document, an anonymized PDF document, an anonymized Word document, and an HTML document. It will also generate an title page with abstract. All of those files will be in the <code>doc/</code> directory.</p>
+<p>If the user is interested in generating a <code>.bib</code> file for their citations, they can execute the following command.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>make refs</span></code></pre></div>
+<p>This will farm the <code>ms.Rmd</code> file for citations and format that as a <code>refs.bib</code> file in the <code>inst/</code> directory.</p>
+</div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
