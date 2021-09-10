@@ -1,1 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+
+# This is for downloading CSLs
+importFrom(httr, "GET", "write_disk", "http_error", "status_code")
+importFrom(tools, "file_ext")

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • steveproj</title>
+<title>Download Citation Style Language (CSL) File from Github — dl_csl • steveproj</title>
 
 
 <!-- jquery -->
@@ -41,7 +41,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Download Citation Style Language (CSL) File from Github — dl_csl" />
+<meta property="og:description" content="dl_csl() will download a requested citation style language (CSL) file from the
+Github repository of CSL files." />
 
 
 
@@ -60,7 +62,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -107,54 +109,57 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Download Citation Style Language (CSL) File from Github</h1>
+    <small class="dont-index">Source: <a href='https://github.com/svmiller/steveproj/blob/master/R/dl_csl.R'><code>R/dl_csl.R</code></a></small>
+    <div class="hidden name"><code>dl_csl.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p><code>dl_csl()</code> will download a requested citation style language (CSL) file from the
+Github repository of CSL files.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>dl_csl</span><span class='op'>(</span><span class='va'>csl</span>, dir <span class='op'>=</span> <span class='st'>"inst"</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="create_project.html">create_project()</a></code> </p>
-        </td>
-        <td><p>Create an Academic Project/Paper Project (i.e. a Steve Project)</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="create_rproj.html">create_rproj()</a></code> </p>
-        </td>
-        <td><p>Create an R Project File in your Academic ("Steve") Project</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dl_csl.html">dl_csl()</a></code> </p>
-        </td>
-        <td><p>Download Citation Style Language (CSL) File from Github</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>csl</th>
+      <td><p>a valid CSL file on the GIthub repository of CSL files, with or without file extension</p></td>
+    </tr>
+    <tr>
+      <th>dir</th>
+      <td><p>the subdirectory in the working directory in which you want the CSL file, defaults to "inst". A user who wants
+the CSL file in their current working directory should set this to be <code>NULL</code>.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p><code>dl_csl()</code> takes a requested CSL file (from the Github repository) and an optional subdirectory,
+downloads the CSL file, and sticks it in the requested directory.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p><code>dl_csl()</code> assumes an active internet connection. The function also builds in a few implicit defaults.
+If a file matching the requested CSL exists, the function does nothing. If the requested CSL does not have a ".csl"
+extension, the function assumes you forgot it and adds it for you. By default, the function downloads the CSL file
+and sticks it in your "inst" folder in the working directory. You can change this if you'd like with the <code>dir</code>
+argument. If the directory does not exist, the function creates it for you. If you'd like the CSL file in the current
+directory, set the <code>dir</code> argument to be <code>NULL</code>. The Github repository of CSL files is available here:
+<a href='https://github.com/citation-style-language/styles'>https://github.com/citation-style-language/styles</a>.</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>dl_csl</span><span class='op'>(</span><span class='st'>"american-political-science-association.csl"</span><span class='op'>)</span> <span class='co'># Works, has extension too</span>
+<span class='fu'>dl_csl</span><span class='op'>(</span><span class='st'>"journal-of-peace-research"</span><span class='op'>)</span> <span class='co'># Will also work, but message you that it assumes you forgot ".csl"</span>
+<span class='op'>}</span>
+
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

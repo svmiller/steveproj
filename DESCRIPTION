@@ -16,6 +16,7 @@ Imports:
     bib2df,
     bookdown,
     dplyr,
+    httr,
     huxtable,
     kableExtra,
     magrittr,
