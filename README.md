@@ -192,7 +192,11 @@ should work just fine. The increased integration of Linux into Windows,
 prominently [Windows Subsystem for
 Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10),
 offers more avenues for Windows users to install Make on their operating
-system.
+system. I thank [Dave Braze](https://github.com/davebraze) for alerting
+me to another option. Windows users can install and configure `make`
+through installing `{RTools}`. Afterwards, the user can add a fully
+qualified path to their PATH environment. You can [read more about this
+process here](https://cran.r-project.org/bin/windows/Rtools/).
 
 ## Usage
 
