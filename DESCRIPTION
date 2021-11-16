@@ -32,4 +32,5 @@ Imports:
 Suggests:
     testthat (>= 3.0.0)
 RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)
 Config/testthat/edition: 3

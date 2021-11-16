@@ -22,8 +22,10 @@
 #' @examples
 #'
 #' \dontrun{
-#' dl_csl("american-political-science-association.csl") # Works, has extension too
-#' dl_csl("journal-of-peace-research") # Will also work, but message you that it assumes you forgot ".csl"
+#' dl_csl("american-political-science-association.csl")
+#' # ^ Works, has extension too
+#' dl_csl("journal-of-peace-research")
+#' # ^ Will also work, but message you that it assumes you forgot ".csl"
 #' }
 #'
 #' @export
