@@ -23,8 +23,8 @@ to be in the same directory as the R Markdown file should specify
 \code{output_dir = NULL} here.}
 
 \item{outputs}{the various formatted manuscript types the user wants,
-supplied as a character vector. Must be one or more of "pdf", "pdf-anon",
-"word", and/or "html". No other formats are supported right now.}
+supplied as a character vector. Must be one or more of "pdf" and/or "word".
+No other formats are supported right now.}
 
 \item{latex_engine}{the LaTeX engine the user may want to use.
 Defaults to \code{"xelatex"}. You can overwrite this if you would like, but
