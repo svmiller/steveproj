@@ -1,6 +1,8 @@
-#' Render Your R Markdown Manuscript to Various Ouputs
+#' Render Your R Markdown Manuscript to Various Outputs
 #'
-#' @description dsfasdfasfda
+#' @description `render_ms()` takes various arguments, most effectively built
+#' into the function, and renders your R Markdown manuscript to various outputs
+#' supported by \pkg{stevetemplates}.
 #'
 #'
 #' @param file the name of the R Markdown file containing that is your
@@ -17,17 +19,21 @@
 #' what's in your R Markdown file, passed as `params` in the `render()`
 #' function in R Markdown. If no parameters are specified here, the
 #' function defaults these parameters to
-#' `anonymous=TRUE,doublespacing=TRUE,removetitleabstract=TRUE`,
+#' `anonymous=TRUE, doublespacing=TRUE, removetitleabstract=TRUE`,
 #' which is then wrapped in a list to be passed to the `params`
 #' argument in `render()`. Do note this primarily concerns the anonymous
-#' manuscript type.
+#' manuscript type. These are somewhat advanced-level arguments, so the user
+#' should be careful what they do here and should have a firm idea what
+#' they are doing here.
 #' @param latex_engine the LaTeX engine the user may want to use.
 #' Defaults to `"xelatex"`. You can overwrite this if you would like, but
 #' why would you?
 #' @param dev the graphics device for LaTeX PDFs. Defaults to `"cairo_pdf"`.
 #' You can overwrite this, but why would you?
 #'
-#' @return dsafsdafsa
+#' @return `render_ms()` takes various arguments, most effectively built
+#' into the function, and renders your R Markdown manuscript to various outputs
+#' supported by \pkg{stevetemplates}.
 #'
 #' @examples
 #'
@@ -51,7 +57,7 @@ render_ms <- function(file = "ms.Rmd", output_dir = "doc",
 
 
   if(missing(parameters)) {
-    the_params <- eval(parse(text = paste0("list(anonymous=TRUE,doublespacing=TRUE,removetitleabstract=TRUE)")))
+    the_params <- eval(parse(text = paste0("list(anonymous=TRUE, doublespacing=TRUE, removetitleabstract=TRUE)")))
   } else {
     the_params <- eval(parse(text = paste0("list(", parameters," )")))
   }

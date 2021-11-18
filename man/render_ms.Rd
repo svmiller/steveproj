@@ -2,7 +2,7 @@
 % Please edit documentation in R/render_ms.R
 \name{render_ms}
 \alias{render_ms}
-\title{Render Your R Markdown Manuscript to Various Ouputs}
+\title{Render Your R Markdown Manuscript to Various Outputs}
 \usage{
 render_ms(
   file = "ms.Rmd",
@@ -31,10 +31,12 @@ supplied as a character vector. Must be one or more of "pdf", "pdf-anon",
 what's in your R Markdown file, passed as \code{params} in the \code{render()}
 function in R Markdown. If no parameters are specified here, the
 function defaults these parameters to
-\verb{anonymous=TRUE,doublespacing=TRUE,removetitleabstract=TRUE},
+\verb{anonymous=TRUE, doublespacing=TRUE, removetitleabstract=TRUE},
 which is then wrapped in a list to be passed to the \code{params}
 argument in \code{render()}. Do note this primarily concerns the anonymous
-manuscript type.}
+manuscript type. These are somewhat advanced-level arguments, so the user
+should be careful what they do here and should have a firm idea what
+they are doing here.}
 
 \item{latex_engine}{the LaTeX engine the user may want to use.
 Defaults to \code{"xelatex"}. You can overwrite this if you would like, but
@@ -44,10 +46,14 @@ why would you?}
 You can overwrite this, but why would you?}
 }
 \value{
-dsafsdafsa
+\code{render_ms()} takes various arguments, most effectively built
+into the function, and renders your R Markdown manuscript to various outputs
+supported by \pkg{stevetemplates}.
 }
 \description{
-dsfasdfasfda
+\code{render_ms()} takes various arguments, most effectively built
+into the function, and renders your R Markdown manuscript to various outputs
+supported by \pkg{stevetemplates}.
 }
 \examples{
 

@@ -1,7 +1,7 @@
 Package: steveproj
 Type: Package
 Title: Steve's Academic R Projects
-Version: 0.1.0
+Version: 0.1.9
 Author: Steven V. Miller
 Maintainer: Steven V. Miller <steven.v.miller@gmail.com>
 Description: This is a one-function suite and skeleton project directory to help you
