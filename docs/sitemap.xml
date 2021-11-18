@@ -4,6 +4,9 @@
     <loc>http://svmiller.com/index.html</loc>
   </url>
   <url>
+    <loc>http://svmiller.com/reference/create_appendix.html</loc>
+  </url>
+  <url>
     <loc>http://svmiller.com/reference/create_memo.html</loc>
   </url>
   <url>
@@ -14,6 +17,9 @@
   </url>
   <url>
     <loc>http://svmiller.com/reference/dl_csl.html</loc>
+  </url>
+  <url>
+    <loc>http://svmiller.com/reference/render_appendix.html</loc>
   </url>
   <url>
     <loc>http://svmiller.com/reference/render_memo.html</loc>

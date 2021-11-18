@@ -1,4 +1,4 @@
-#' Create an Academic Project/Paper Project (i.e. a Steve Project)
+#' Create an Academic Project/Paper Project
 #'
 #' @description \code{create_project()} provides a convenient function for creating
 #' a new academic/paper project.

@@ -1,4 +1,4 @@
-#' Create a Memo File for Your Academic ("Steve") Project
+#' Create a Memo File for Your Academic Project
 #'
 #' @description \code{create_memo()} creates an R Markdown for a memo to go
 #' with your academic project.

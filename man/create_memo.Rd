@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_memo.R
 \name{create_memo}
 \alias{create_memo}
-\title{Create a Memo File for Your Academic ("Steve") Project}
+\title{Create a Memo File for Your Academic Project}
 \usage{
 create_memo(path)
 }

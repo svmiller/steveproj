@@ -1,4 +1,4 @@
-#' Create an R Project File in your Academic ("Steve") Project
+#' Create an R Project File in your Academic Project
 #'
 #' @description \code{create_rproj()} finishes by way of command line what Rstudio will do
 #' naturally. It will add a simple \code{.Rproj} file to your directory.

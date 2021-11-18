@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_rproj.R
 \name{create_rproj}
 \alias{create_rproj}
-\title{Create an R Project File in your Academic ("Steve") Project}
+\title{Create an R Project File in your Academic Project}
 \usage{
 create_rproj(path, ...)
 }

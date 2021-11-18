@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_project.R
 \name{create_project}
 \alias{create_project}
-\title{Create an Academic Project/Paper Project (i.e. a Steve Project)}
+\title{Create an Academic Project/Paper Project}
 \usage{
 create_project(path, ...)
 }

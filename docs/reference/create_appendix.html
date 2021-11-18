@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • steveproj</title>
+<title>Create an Appendix File for Your Academic Project — create_appendix • steveproj</title>
 
 
 <!-- jquery -->
@@ -41,7 +41,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Create an Appendix File for Your Academic Project — create_appendix" />
+<meta property="og:description" content="create_appendix() creates an R Markdown for an appendix
+to go with your academic project." />
 
 
 
@@ -60,7 +62,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -107,84 +109,56 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Create an Appendix File for Your Academic Project</h1>
+    <small class="dont-index">Source: <a href='https://github.com/svmiller/steveproj/blob/master/R/create_appendix.R'><code>R/create_appendix.R</code></a></small>
+    <div class="hidden name"><code>create_appendix.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p><code>create_appendix()</code> creates an R Markdown for an appendix
+to go with your academic project.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>create_appendix</span><span class='op'>(</span><span class='va'>path</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="create_appendix.html">create_appendix()</a></code> </p>
-        </td>
-        <td><p>Create an Appendix File for Your Academic Project</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="create_memo.html">create_memo()</a></code> </p>
-        </td>
-        <td><p>Create a Memo File for Your Academic Project</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="create_project.html">create_project()</a></code> </p>
-        </td>
-        <td><p>Create an Academic Project/Paper Project</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="create_rproj.html">create_rproj()</a></code> </p>
-        </td>
-        <td><p>Create an R Project File in your Academic Project</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dl_csl.html">dl_csl()</a></code> </p>
-        </td>
-        <td><p>Download Citation Style Language (CSL) File from Github</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="render_appendix.html">render_appendix()</a></code> </p>
-        </td>
-        <td><p>Render Your R Markdown Appendix to Various Outputs</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="render_memo.html">render_memo()</a></code> </p>
-        </td>
-        <td><p>Render Your R Markdown Memo to Various Outputs</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="render_ms.html">render_ms()</a></code> </p>
-        </td>
-        <td><p>Render Your R Markdown Manuscript to Various Outputs</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>path</th>
+      <td><p>a path in which to place the appendix file. Defaults to current
+working directory in the absence of a user-specified argument. User-supplied
+arguments here should be understood as subdirectories relative to current
+working directory. Assume that the current working directory is something
+like <code>/home/steve/</code>, then specifying a path of "Documents" in this argument
+would create the memo file in <code>/home/steve/Documents</code>. Just be mindful about
+your setup if you experiment with this argument.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p><code>create_appendix()</code> creates a <code>appendix.Rmd</code> file in the path
+requested by user. Users can create an appendix at any time during the
+submission timeline of the academic project, but I often---but not
+always---create them at the revise-and-resubmit phase. That would explain
+why it's not a default file.</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='co'># Creates a `appendix.Rmd` file in working directory</span>
+<span class='fu'>create_appendix</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='co'># Creates a `appendix.Rmd` in subdirectory of working directory</span>
+
+<span class='fu'>create_appendix</span><span class='op'>(</span><span class='st'>"subdirectory"</span><span class='op'>)</span>
+<span class='op'>}</span>
+
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

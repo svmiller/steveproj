@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create an Academic Project/Paper Project — create_project • steveproj</title>
+<title>Render Your R Markdown Appendix to Various Outputs — render_appendix • steveproj</title>
 
 
 <!-- jquery -->
@@ -41,9 +41,10 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Create an Academic Project/Paper Project — create_project" />
-<meta property="og:description" content="create_project() provides a convenient function for creating
-a new academic/paper project." />
+<meta property="og:title" content="Render Your R Markdown Appendix to Various Outputs — render_appendix" />
+<meta property="og:description" content="render_appendix() takes various arguments, most effectively built
+into the function, and renders your R Markdown manuscript to various outputs
+supported by stevetemplates." />
 
 
 
@@ -111,42 +112,85 @@ a new academic/paper project." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Create an Academic Project/Paper Project</h1>
-    <small class="dont-index">Source: <a href='https://github.com/svmiller/steveproj/blob/master/R/create_project.R'><code>R/create_project.R</code></a></small>
-    <div class="hidden name"><code>create_project.Rd</code></div>
+    <h1>Render Your R Markdown Appendix to Various Outputs</h1>
+    <small class="dont-index">Source: <a href='https://github.com/svmiller/steveproj/blob/master/R/render_appendix.R'><code>R/render_appendix.R</code></a></small>
+    <div class="hidden name"><code>render_appendix.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>create_project()</code> provides a convenient function for creating
-a new academic/paper project.</p>
+    <p><code>render_appendix()</code> takes various arguments, most effectively built
+into the function, and renders your R Markdown manuscript to various outputs
+supported by <span class="pkg">stevetemplates</span>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>create_project</span><span class='op'>(</span><span class='va'>path</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>render_appendix</span><span class='op'>(</span>
+  file <span class='op'>=</span> <span class='st'>"appendix.Rmd"</span>,
+  output_dir <span class='op'>=</span> <span class='st'>"doc"</span>,
+  outputs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"pdf"</span>, <span class='st'>"pdf-anon"</span><span class='op'>)</span>,
+  <span class='va'>parameters</span>,
+  latex_engine <span class='op'>=</span> <span class='st'>"xelatex"</span>,
+  dev <span class='op'>=</span> <span class='st'>"cairo_pdf"</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>path</th>
-      <td><p>the directory name for the project (e.g. "my-project", "dissertation", or whatever)</p></td>
+      <th>file</th>
+      <td><p>the name of the R Markdown file containing that is your
+appendix. Defaults to "appendix.Rmd".</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>optional stuff, but you can ignore this</p></td>
+      <th>output_dir</th>
+      <td><p>the output directory to contain the formatted manuscript.
+Defaults to "doc". Optimally, this is a subdirectory of the directory
+containing the manuscript. A user who wants the formatted manuscript
+to be in the same directory as the R Markdown file should specify
+<code>output_dir = NULL</code> here.</p></td>
+    </tr>
+    <tr>
+      <th>outputs</th>
+      <td><p>the various formatted manuscript types the user wants,
+supplied as a character vector. Must be one or more of "pdf", "pdf-anon",
+"word", and/or "html". No other formats are supported right now. Defaults
+are "pdf" and "pdf-anon".</p></td>
+    </tr>
+    <tr>
+      <th>parameters</th>
+      <td><p>optional parameters, specified as a character, based on
+what's in your R Markdown file, passed as <code>params</code> in the <code>render()</code>
+function in R Markdown. If no parameters are specified here, the
+function defaults these parameters to
+<code>anonymous=TRUE, doublespacing=TRUE, removetitleabstract=TRUE</code>,
+which is then wrapped in a list to be passed to the <code>params</code>
+argument in <code>render()</code>. Do note this primarily concerns the anonymous
+manuscript type. These are somewhat advanced-level arguments, so the user
+should be careful what they do here and should have a firm idea what
+they are doing here.</p></td>
+    </tr>
+    <tr>
+      <th>latex_engine</th>
+      <td><p>the LaTeX engine the user may want to use.
+Defaults to <code>"xelatex"</code>. You can overwrite this if you would like, but
+why would you?</p></td>
+    </tr>
+    <tr>
+      <th>dev</th>
+      <td><p>the graphics device for LaTeX PDFs. Defaults to <code>"cairo_pdf"</code>.
+You can overwrite this, but why would you?</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>create_project()</code> creates a directory named with whatever is supplied in the <code>path</code> variable. This
-directory will appear in the current working directory if it is executed in the command line. The contents of that
-directory will include a skeleton project to get the user started. The user can (and must) ultimately make it their own.</p>
+    <p><code><a href='render_ms.html'>render_ms()</a></code> takes various arguments, most effectively built
+into the function, and renders your R Markdown manuscript to various outputs
+supported by <span class="pkg">stevetemplates</span>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='fu'>create_project</span><span class='op'>(</span><span class='st'>"example"</span><span class='op'>)</span>
-<span class='fu'>create_project</span><span class='op'>(</span><span class='st'>"dissertation"</span><span class='op'>)</span>
+<span class='fu'>render_appendix</span><span class='op'>(</span><span class='op'>)</span>
 <span class='op'>}</span>
 
 </div></pre>
