@@ -32,7 +32,7 @@ are "pdf" and "pdf-anon".}
 what's in your R Markdown file, passed as \code{params} in the \code{render()}
 function in R Markdown. If no parameters are specified here, the
 function defaults these parameters to
-\verb{anonymous=TRUE, doublespacing=TRUE, removetitleabstract=TRUE},
+\verb{anonymous=TRUE, doublespacing=TRUE},
 which is then wrapped in a list to be passed to the \code{params}
 argument in \code{render()}. Do note this primarily concerns the anonymous
 manuscript type. These are somewhat advanced-level arguments, so the user

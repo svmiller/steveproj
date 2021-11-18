@@ -96,7 +96,7 @@ render_ms <- function(file = "ms.Rmd", output_dir = "doc",
       file_location <- paste0(file_name,".pdf")
     } else { # assuming an output directory is specified
 
-      file_location <- paste0(output_dir,"/",file_name,".pdf")
+      file_location <- paste0(output_dir,"/",file_name,"-anon.pdf")
 
 
     }

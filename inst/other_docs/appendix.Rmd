@@ -1,9 +1,10 @@
 ---
 title: "APPENDIX: [Insert Paper Title Here]"
-# author:
-# - name: Steven V. Miller
-#   affiliation: Clemson University
-#   email: svmille@clemson.edu
+author:
+- name: Carl Sagan
+  affiliation: Cornell University & the Cosmos
+- name: Steven V. Miller
+  affiliation: Clemson University
 # thanks: "This is a work in progress. Feedback welcome: svmille@clemson.edu."
 # bibliography: "`r paste0(Sys.getenv('HOME'),'/Dropbox/master.bib')`"
 # biblio-style: apsr

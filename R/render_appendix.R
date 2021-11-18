@@ -20,7 +20,7 @@
 #' what's in your R Markdown file, passed as `params` in the `render()`
 #' function in R Markdown. If no parameters are specified here, the
 #' function defaults these parameters to
-#' `anonymous=TRUE, doublespacing=TRUE, removetitleabstract=TRUE`,
+#' `anonymous=TRUE, doublespacing=TRUE`,
 #' which is then wrapped in a list to be passed to the `params`
 #' argument in `render()`. Do note this primarily concerns the anonymous
 #' manuscript type. These are somewhat advanced-level arguments, so the user
@@ -60,7 +60,7 @@ render_appendix <- function(file = "appendix.Rmd", output_dir = "doc",
 
 
   if(missing(parameters)) {
-    the_params <- eval(parse(text = paste0("list(anonymous=TRUE, doublespacing=TRUE, removetitleabstract=TRUE)")))
+    the_params <- eval(parse(text = paste0("list(anonymous=TRUE, doublespacing=TRUE)")))
   } else {
     the_params <- eval(parse(text = paste0("list(", parameters," )")))
   }
@@ -97,7 +97,7 @@ render_appendix <- function(file = "appendix.Rmd", output_dir = "doc",
       file_location <- paste0(file_name,".pdf")
     } else { # assuming an output directory is specified
 
-      file_location <- paste0(output_dir,"/",file_name,".pdf")
+      file_location <- paste0(output_dir,"/",file_name,"-anon.pdf")
 
 
     }
