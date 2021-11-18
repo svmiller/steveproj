@@ -24,7 +24,7 @@ Imports:
     modelsummary,
     readr,
     rmarkdown,
-    stevetemplates (>= 0.5.0),
+    stevetemplates (>= 0.7.0),
     stevemisc (>= 1.0.0),
     stringr,
     yaml,

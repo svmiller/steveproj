@@ -1,0 +1,58 @@
+---
+geometry: margin=1in
+header-includes:
+  - \linespread{1.05}
+
+author: "&nbsp;"
+address: ""
+email: ""
+url: ""
+phone: ""
+fontsize: 11pt
+# mainfont: cochineal
+# monofont: Fira Code
+
+date: "`r format(Sys.time(), '%e %B %Y')`"
+greetings: "Dear Editor and Reviewers,"
+# bibliography: "`r paste0(Sys.getenv('HOME'),'/Dropbox/master.bib')`"
+# biblio-style: apsr
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(tidyverse)
+library(peacesciencer)
+library(kableExtra)
+
+is_docx <- knitr::pandoc_to("docx")
+is_latex <- knitr::pandoc_to("latex")
+is_html <- knitr::pandoc_to("html")
+
+```
+
+
+
+I thank you all for the opportunity to submit revisions of my manuscript "[INSERT YOUR MANUSCRIPT NAME HERE]" for possible inclusion in *INSERT JOURNAL HERE*. I thank the [two/three/four/five/six/seven/eight] reviewers and the editorial team for the helpful comments as well. In what follows, I address the editor about the changes to the manuscript that came in light of reviewer feedback. Thereafter, I address the reviewers' comments individually.
+
+# Comments to the Editorial Team
+
+Do you ever feel like a plastic bag? Drifting through the wind, wanting to start again?
+
+Best regards,
+
+
+The Author
+
+\newpage
+
+# Reviewer #1's Comments
+
+Reviewer #1 (R1) said some things. I said some things. We all agreed to move past it. 
+
+# Reviewer #2's Comments
+
+I thank Reviewer #2 (R2) for their comments. R2 felt I was [2 legit 2 quit](https://www.youtube.com/watch?v=HFCv86Olk8E). That was a very sweet thing for R2 to say and I thank them for it.

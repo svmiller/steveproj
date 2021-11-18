@@ -3,3 +3,9 @@ exportPattern("^[[:alpha:]]+")
 # This is for downloading CSLs
 importFrom(httr, "GET", "write_disk", "http_error", "status_code")
 importFrom(tools, "file_ext")
+
+# This is for rendering stuff
+
+importFrom(rmarkdown, "pandoc_available", "render")
+importFrom(bookdown, "pdf_document2", "word_document2", "html_document2")
+importFrom(stevetemplates, "templ_html_article", "templ_word", "templ_article2", "templ_cover_letter")
