@@ -4,8 +4,7 @@ author:
 - name: Carl Sagan
   affiliation: Cornell University & the Cosmos
 - name: Steven V. Miller
-  affiliation: Clemson University
-# thanks: "This is a work in progress. Feedback welcome: svmille@clemson.edu."
+  affiliation: Stockholm University
 # bibliography: "`r paste0(Sys.getenv('HOME'),'/Dropbox/master.bib')`"
 # biblio-style: apsr
 geometry: margin=1in
