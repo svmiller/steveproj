@@ -1,0 +1,44 @@
+---
+title: "Sagan Ipsum and a Workflow Guide with Make, R, R Markdown, and Some {stevetemplates}"
+author:
+  - affiliation: "Cornell University"
+    name: "Carl Sagan"
+  - affiliation: "Stockholm University"
+    name: "Steven V. Miller"
+# bibliography: "`r paste0(Sys.getenv('HOME'),'/Dropbox/master.bib')`" # This would be more general
+bibliography: inst/refs.bib
+abstract: |
+  Gathered by gravity rings of Uranus finite but unbounded extraordinary claims require
+  extraordinary evidence permanence of the stars white dwarf. A mote of dust suspended
+  in a sunbeam invent the universe rich in heavy atoms hearts of the stars vastness is
+  bearable only through love at the edge of forever. Something incredible is waiting to be
+  known descended from astronomers bits of moving fluff vanquish the impossible with pretty
+  stories for which there's little good evidence a very small stage in a vast cosmic arena
+  and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+keywords: "R Markdown, R, Make, {stevetemplates}, the Cosmos, billions and billions"
+thanks: |
+  Replication files are available on the author's Github account
+  (http://github.com/svmiller/svm-r-markdown-templates).
+  **Current version**: `r format(Sys.time(), '%B %d, %Y')`;
+  **Corresponding author**: steven.v.miller@gmail.com. Carl Sagan has regrettably
+  not been with us for 25 years and this tutorial is so beneath someone of his stature.
+geometry: margin=1in
+mainfont: cochineal
+#sansfont: Linux Biolinum O
+fontsize: 11pt
+endnote: no
+# pandocparas: TRUE
+sansitup: FALSE
+params:
+  anonymous: ""
+  doublespacing: ""
+  removetitleabstract: ""
+anonymous: '`r params$anonymous`'
+doublespacing: '`r params$doublespacing`'
+removetitleabstract: '`r params$removetitleabstract`'
+header-includes:
+  - \usepackage{longtable}
+  - \LTcapwidth=.95\textwidth
+  - \linespread{1.05}
+  - \usepackage{hyperref}
+---

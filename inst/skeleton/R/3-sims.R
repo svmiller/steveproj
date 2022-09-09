@@ -1,32 +1,45 @@
-# Libraries first
-library(stevemisc)
-# library(tidyverse)
-library(modelr)
+prep <- function() {
+  set.seed(8675309)
+  ESS9GB %>%
+    mutate(noise = rnorm(nrow(.))) -> Data
 
-# Load stuff
-Mods <- readRDS("data/Mods.rds")
-Data <- readRDS("data/Data.rds")
-
-# in {tidyverse}
-# Data %>%
-#   data_grid(lrscale = unique(lrscale), .model = Mods[[1]],
-#             immigsent = 0) %>% na.omit -> newdat
+  saveRDS(Data, "data/Data.rds")
+  Data <<- Data
+  return(Data)
+}
 
 
-Sims <- list()
+analysis <- function() {
+  Data <- readRDS("data/Data.rds")
+  Mods <- list()
+  Mods[[1]] <- lm(immigsent ~ agea + female + eduyrs + uempla + hinctnta + lrscale, data=Data)
+  Mods[[2]] <- lm(immigsent ~ agea + female + eduyrs + uempla + hinctnta + lrscale + noise, data=Data)
+  saveRDS(Mods, "data/Mods.rds")
+  Mods <<- Mods
+  return(Mods)
 
-na.omit(data_grid(Data, lrscale = unique(lrscale), .model = Mods[[1]], immigsent = 0)) -> newdat
+}
 
-Sims$"SQI (Ideology)" <- get_sims(Mods[[1]], newdat = newdat, 1000, 8675309)
-
-Sims[[1]]$lrscale <- rep(seq(0:10), 1000)
+sims <- function() {
 
 
+  Mods <- readRDS("data/Mods.rds")
+  Data <- readRDS("data/Data.rds")
 
-# in {tidyverse}
-# newdat %>%
-#   # repeat this data frame how many times we did simulations
-#   dplyr::slice(rep(row_number(), 1000)) %>%
-#   bind_cols(get_sims(Mods[[1]], newdata = newdat, 1000, 8675309), .) -> Sims$"SQI (Ideology)"
+  Data %>%
+    data_grid(lrscale = unique(lrscale), .model = Mods[[1]],
+              immigsent = 0) %>% na.omit -> newdat
 
-saveRDS(Sims, "data/Sims.rds")
+
+  Sims <- list()
+
+  newdat %>%
+    # repeat this data frame how many times we did simulations
+    dplyr::slice(rep(row_number(), 1000)) %>%
+    bind_cols(get_sims(Mods[[1]], newdata = newdat, 1000, 8675309), .) -> Sims$"SQI (Ideology)"
+
+
+  saveRDS(Sims, "data/Sims.rds")
+  Sims <<- Sims
+  return(Sims)
+}
