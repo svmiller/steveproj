@@ -1,9 +1,9 @@
 render_pdf <- function() {
 
-  ymlchars <- file.info("ms.yaml")$size
+  ymlchars <- file.info("_config.yaml")$size
   rmdchars <- file.info("ms.Rmd")$size
 
-  cat(paste0(readChar("ms.yaml",nchars=ymlchars),
+  cat(paste0(readChar("_config.yaml",nchars=ymlchars),
              readChar("ms.Rmd",nchars=rmdchars)),
       file="tmp.Rmd")
 
@@ -21,10 +21,10 @@ render_pdf <- function() {
 
 render_pdfanon <- function() {
 
-  ymlchars <- file.info("ms.yaml")$size
+  ymlchars <- file.info("_config.yaml")$size
   rmdchars <- file.info("ms.Rmd")$size
 
-  cat(paste0(readChar("ms.yaml",nchars=ymlchars),
+  cat(paste0(readChar("_config.yaml",nchars=ymlchars),
              readChar("ms.Rmd",nchars=rmdchars)),
       file="tmp.Rmd")
 
@@ -44,10 +44,10 @@ render_pdfanon <- function() {
 
 render_docx <- function() {
 
-  ymlchars <- file.info("ms.yaml")$size
+  ymlchars <- file.info("_config.yaml")$size
   rmdchars <- file.info("ms.Rmd")$size
 
-  cat(paste0(readChar("ms.yaml",nchars=ymlchars),
+  cat(paste0(readChar("_config.yaml",nchars=ymlchars),
              readChar("ms.Rmd",nchars=rmdchars)),
       file="tmp.Rmd")
 
