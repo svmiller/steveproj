@@ -1,42 +1,4 @@
----
-title: "APPENDIX: [Insert Paper Title Here]"
-author:
-- name: Carl Sagan
-  affiliation: Cornell University & the Cosmos
-- name: Steven V. Miller
-  affiliation: Stockholm University
-# bibliography: "`r paste0(Sys.getenv('HOME'),'/Dropbox/master.bib')`"
-# biblio-style: apsr
-geometry: margin=1in
-date: "`r format(Sys.time(), '%B %d, %Y')`"
-fontsize: 11pt
-keywords: ""
-endnotes: FALSE
-# csl: inst/jpr.csl
-mainfont: cochineal
-# sansfont: Linux Biolinum O
-sansitup: FALSE
-params:
-  anonymous: ""
-  doublespacing: ""
-  removetitleabstract: ""
-appendix: TRUE
-appendixletter: "A"
-pandocparas: FALSE
-anonymous: "`r params$anonymous`"
-doublespacing: "`r params$doublespacing`"
-removetitleabstract: "`r params$removetitleabstract`"
-linkcolor: black
-header-includes:
-  - \usepackage{longtable}
-  - \usepackage{csquotes}
-  - \LTcapwidth=.95\textwidth
-  - \linespread{1.05}
-  - \usepackage{hyperref}
-  - \usepackage{setspace}
-  - \renewcommand{\thepage}{A-\arabic{page}}
----
-
+<!-- APPENDIX -->
 ```{r setup, include=FALSE}
 is_docx <- knitr::pandoc_to("docx")
 is_latex <- knitr::pandoc_to("latex")
