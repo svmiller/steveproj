@@ -175,7 +175,7 @@ Descended from astronomers laws of physics vastness is bearable only through lov
 
 ```{r make-sims-ideology}
 
-Sims[[1]] %>% 
+QI[[1]] %>% 
   group_by(lrscale) %>% 
   summarize(mean = mean(y), 
             lwr = quantile(y, .025), 
