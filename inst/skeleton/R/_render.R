@@ -59,3 +59,14 @@ render_docx <- function() {
   delfiles <- dir(pattern="tmp|fff|log|ttt")
   file.remove(delfiles)
 }
+
+# render_presentation <- function() {
+#
+#   rmarkdown::render("presentation.Rmd",
+#                     output_file="doc/presentation.pdf",
+#                     rmarkdown::beamer_presentation(template = stevetemplates::templ_beamer(),
+#                                                    latex_engine = "xelatex", dev="cairo_pdf", toc = FALSE,
+#                                                    number_sections = FALSE,
+#                                                    theme = "metropolis"))
+#
+# }
